@@ -1,6 +1,9 @@
-package com.example.springcodedemo;
+package com.example.springcodedemo.rest;
 
+
+import com.example.springcodedemo.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +20,7 @@ public class DemoController {
 
     //define a constrctor for dependency injection
     @Autowired
-    public DemoController(Coach theCoach)
+    public DemoController(@Qualifier("trackCoach") Coach theCoach)
     {
         myCoach=theCoach;
     }
