@@ -1,22 +1,21 @@
 package com.example.springcodedemo.common;
 
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 /**
  * @descriptions:
  * @author: cmy
- * @date: 2024/11/4 17:31
+ * @date: 2024/11/4 17:30
  * @version: 1.0
  */
 @Component
-public class TrackCoach implements Coach{
-    public TrackCoach()
+public class TennisCoach implements Coach{
+    public TennisCoach()
     {
         System.out.println("In constructor: "+getClass().getSimpleName());
     }
     @Override
     public String getDailyWorkout() {
-        return "Run a hard 5k!";
+        return "Practice your backhand volley";
     }
 }
